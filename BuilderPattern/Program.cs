@@ -9,10 +9,19 @@ namespace BuilderPattern
             Console.WriteLine("Example of Builder pattern\n");
 
             Director director = new Director();
-
             CarBuilder builder = new CarBuilder();
+
             director.ConstructSportCar(builder);
-            Car car = builder.GetProduct();
+            Car sportCar = builder.GetProduct();
+            Console.WriteLine("SPORT CAR");
+            sportCar.Info();
+            Console.WriteLine();
+
+            director.ConstructSUVCar(builder);
+            Car suvCar = builder.GetProduct();
+            Console.WriteLine("SUV CAR");
+            suvCar.Info();
+            Console.WriteLine();
         }
     }
 }

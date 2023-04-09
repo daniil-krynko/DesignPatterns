@@ -14,4 +14,11 @@ public class Director
         builder.SetTripComputer(true);
         builder.SetGPS(true);
     }
+    public void ConstructSUVCar(IBuilder builder)
+    {
+        builder.Reset();
+        builder.SetSeats(5);
+        builder.SetEngine("Chrysler Pentastar");
+        builder.SetGPS(true);
+    }
 }
